@@ -1,79 +1,113 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# Flight Booking Application
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Introduction
 
-## Step 1: Start the Metro Server
+Welcome to the Flight Booking Application – a React Native mobile app that allows users to authenticate, search for flights, and view results.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Features
 
-To start Metro, run the following command from the _root_ of your React Native project:
+1. **Authentication:**
+   - Users can securely log in to their accounts.
 
-```bash
-# using npm
-npm start
+2. **Flight Search:**
+   - Search for flights based on specified criteria such as departure, destination, and date.
 
-# OR using Yarn
-yarn start
-```
+3. **Results:**
+   - View a list of flight options based on the search criteria.
 
-## Step 2: Start your Application
+## Screens
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+### 1. Login Screen
+   - Users can enter their credentials to log in.
+   - Secure authentication using email and password.
 
-### For Android
+### 2. Home/Search Screen
+   - Input fields for departure, destination, and date.
+   - Search button triggers flight search based on user input.
 
-```bash
-# using npm
-npm run android
+### 3. Results Screen
+   - Displays a list of available flights based on the search criteria.
+   - Each flight includes details such as flight number, departure time, and airline.
 
-# OR using Yarn
-yarn android
-```
 
-### For iOS
+## Project Structure
 
-```bash
-# using npm
-npm run ios
+    src
+        - components
+        - navigators
+        - resources
+            - colors
+            - config
+            - constants
+            - images
+        - screens
+        - services
+        - types
 
-# OR using Yarn
-yarn ios
-```
+- src - This is the root folder when all the business logic and assets and everything is resides in it.
+- components - In this folder re-usable components are created.
+- navigators - In this folder, all the navigation related files will reside.
+- resources - In this folder, all the static assests will reside.
+  - colors - all the colors which are used inside the app reside in this folder.
+  - config - all the configuration related info will reside in this folder like baseURL, aws urls etc.
+  - constants - all the constants which are used for async storage and some static stuff which is repeating in the app will reside here.
+  - fonts - all the fonts will reside in this folder.
+  - images - all the static images and gifs and videos will reside in this folder.
+- screens - all the main screens which are displaying to the user in the application reside in this folder.
+- services - helper methods, static data, api endpoints, api methods all reside in this folder.
+- types - global file for types mentioned in the screens folder.
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## How to run project
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+- Basic requirements
 
-## Step 3: Modifying your App
+  - Nodejs installed in your system.
+  - Android Studio is installed and configured properly, or else you can go to this url for configuration 👉 [React Native Environment Setup](https://reactnative.dev/docs/environment-setup).
+  - Java installed and configured properly.
+  - Code editor of your choice (preferred VS Code).
+  - Physical android device or emulator, for ios (you should have a macos with the above this configured).
 
-Now that you have successfully run the app, let's modify it.
+- To run project
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+  - Install the necessary dependencies with the following command.
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+    ```nodejs
+    // using npm
 
-## Congratulations! :tada:
+    npm install
 
-You've successfully run and modified your React Native App. :partying_face:
+        or
 
-### Now what?
+    // using yarn
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+    yarn
 
-# Troubleshooting
+    ```
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+  - After installing dependencies, now run the metro bundler with the below command.
 
-# Learn More
+    ```nodejs
+      npm start or npx react-native start
 
-To learn more about React Native, take a look at the following resources:
+              or
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+      yarn start or npx react-native start
+
+    ```
+
+  - After running the metro bundler, open another terminal inside this folder and run below command.
+
+    ```nodejs
+      npm run android or npx react-native run-android
+
+              or
+
+      yarn run android or npx react-native run-android
+    ```
+
+Yayy, That's it!, you have successfully run FlightsSearch project.
+
+## Note
+
+This project is completely written using typescript, so you should have a basic knowledge on how to work with typescript along with that javascript and react-native knowledge.

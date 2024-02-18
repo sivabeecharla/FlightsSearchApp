@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "652587468538",
+    "project_id": "flightbooking-5b347",
+    "storage_bucket": "flightbooking-5b347.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652587468538:android:7aa2b366f48184f920ab43",
+        "android_client_info": {
+          "package_name": "com.flightbookingapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9ieI1uIX-MispytC4dADqI3EXOZssy3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
